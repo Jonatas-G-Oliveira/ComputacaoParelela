@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <pthread.h>
+
+
+int thread_count = 5;
+int **matrizA,**matrizB,** matrizR;
+int linhaA = 5;
+int colunaA = 4;
+int linhaB = 4;
+int colunaB = 1;
 
 
 void aloca_matriz(int ***matriz, int linhas, int colunas) {
@@ -34,15 +43,21 @@ void print_matriz(int **matriz, int linhas, int colunas) {
 }
 
 
-void multiplica_matriz(int **matrizA, int **matrizB, int **matrizR, int linhasA, int colunasA, int colunasB) {
-  int i, j, k;
-  for (i = 0; i < linhasA; i++) {
-    for (j = 0; j < colunasB; j++) {
-      for (k = 0; k < colunasA; k++) {
-        matrizR[i][j] += matrizA[i][k] * matrizB[k][j];
-      }
-    }
+void *multiplica_matriz_threads(void* n_thread ){
+  long numero_thread = (long) n_thread;
+  int i,j,k;
+  int divisao = linhaA/thread_count;
+  int primeira_linha = numero_thread * divisao;
+  int ultima_linha = (numero_thread+1) * divisao -1;
+
+  for(i = primeira_linha; i <= ultima_linha; i++){
+  	for(j = 0; j < colunaB;j++){
+	   for(k = 0; k < colunaA;k++){
+		matrizR[i][j] += matrizA[i][k] * matrizB[k][j];
+	}
+     }
   }
+  return NULL;
 }
 
 
@@ -55,15 +70,10 @@ void libera_matriz(int **matriz, int linhas) {
 }
 
 
-int main(void) {
-  printf("\n -= Multiplicação de Matrizes -= \n");
-  int **matrizA, **matrizB, **matrizR;
-  int linhaA = 5;
-  int colunaA = 4;
-  int linhaB = 4;
-  int colunaB = 1;
+int main(int argc, char * argv[]) {
+  printf("\n -= MultiplicaÃ§Ã£o de Matrizes -= \n");
   if(colunaA != linhaB){
-    printf("Não é possível fazer as operações");
+    printf("NÃ£o Ã© possÃ­vel fazer as operaÃ§Ãµes");
     return 1;
   }
   
@@ -79,9 +89,19 @@ int main(void) {
   print_matriz(matrizB, linhaB, colunaB);
 
   printf("Matriz Resultante: \n");
-  multiplica_matriz(matrizA, matrizB, matrizR, linhaA, colunaA, colunaB);
+
+  long thread;
+  pthread_t *vetor_thread = malloc(thread_count * sizeof(pthread_t));
+  for(thread = 0;thread < thread_count;thread++){
+  	pthread_create(&vetor_thread[thread],NULL,multiplica_matriz_threads,(void*)thread );
+  }
+
+  for(thread = 0;thread < thread_count;thread++){
+        pthread_join(vetor_thread[thread],NULL);
+  }
   print_matriz(matrizR,linhaA,colunaB);
   
+  free(vetor_thread);
   libera_matriz(matrizA, linhaA);
   libera_matriz(matrizB, linhaB);
   libera_matriz(matrizR, linhaA);
