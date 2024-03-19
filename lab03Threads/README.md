@@ -9,7 +9,7 @@
 - Para esse lab foram feitas duas versões do programa.
 
 ###  Compilando o  arquivo:
-- gcc mult_matriz_serial.c -o a.out
+- gcc matriz_serial.c -o a.out
 - gcc mult_matriz.c -o b.out
 
 ###  Executando:
