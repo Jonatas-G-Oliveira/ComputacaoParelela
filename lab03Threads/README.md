@@ -6,7 +6,7 @@
 - Além da melhoria,para esse lab foi desenvolvida um solução serial para o problema.
   
 ## Instruções para execução:
-- Para esse lab foram feitas duas versões do programa.
+- Para esse lab foram feitas duas versões do programa sendo matriz_serial.c a versão que não utiliza threads e matriz_thread.c que utiliza thread
 
 ###  Compilando o  arquivo:
 - gcc matriz_serial.c -o a.out
