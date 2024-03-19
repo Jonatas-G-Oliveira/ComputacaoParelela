@@ -10,7 +10,7 @@
 
 ###  Compilando o  arquivo:
 - gcc matriz_serial.c -o a.out
-- gcc mult_matriz.c -o b.out
+- gcc matriz_thread.c -o b.out
 
 ###  Executando:
 - ./a.out
