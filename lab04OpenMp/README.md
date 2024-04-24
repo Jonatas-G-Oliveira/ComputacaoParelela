@@ -30,7 +30,8 @@ Nome:Jônatas Garcia de Oliveira TIA:4218232
 
 
 ## Diretiva Critical
-  <p>Sem essa diretiva o programa rodou quase que instantaneamente mesmo com uma entrada grande como a de 1.000.000 de trapézios<p><br>
+  <p>Para os testes anteriores eu já estava utilizando essa diretiva para garantir a integridade do programa porém...</p>
+  <p>ao destivar essa diretiva o programa rodou quase que instantaneamente mesmo com uma entrada grande como a de 1.000.000 de trapézios<p><br>
   <p>Utilizei as mesma metodologias para fazer os gráficos</p><br>
   <strong>Gráficos: </strong><br>
   <img src = "https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/lab04OpenMp/imagens/execucao_diretiva.jpg">
