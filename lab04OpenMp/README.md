@@ -30,14 +30,14 @@ Nome:Jônatas Garcia de Oliveira TIA:4218232
 
 
 ## Diretiva Critical
-  Sem essa diretiva o programa tem execuções além do esperado,resultando em números inconstantes
-  [Inserir Imagem]
-
-## SpeedUp
-
-
-
-# Obrigado
+  <p>Sem essa diretiva o programa rodou quase que instantaneamente mesmo com uma entrada grande como a de 1.000.000 de trapézios<p><br>
+  <p>Utilizei as mesma metodologias para fazer os gráficos</p><br>
+  <strong>Gráficos: </strong><br>
+  <img src = https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/lab04OpenMp/imagens/execucao_diretiva.jpg">
+  <img src = https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/lab04OpenMp/imagens/tempo_threads_diretiva.jpg">
+  <img src = https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/lab04OpenMp/imagens/speedUp_diretivas.jpg">
+  
+### Obrigado ;_;/
 
 
 
