@@ -4,7 +4,7 @@ Nome:Jônatas Garcia de Oliveira TIA:4218232
 ### Instruções de execução
 <p>
    Para este lab foram feitas duas versões,ambas utilizam a biblioteca <math.h>,portanto é necessário inclui-la no momento de compilação utilizando o parâmetro -lm<br>
-   Versão Serial -> <code> gcc  lab04_serial.c -lm -o saida.out </code>
+   Versão Serial -> <code> gcc  lab04_serial.c -lm -o saida.out </code> <br>
    Versão Paralela -> <code> gcc lab04.threads.c -lm -o saida.out -fopenmp </code>
 </p>
 
