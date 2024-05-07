@@ -13,30 +13,32 @@
 //Se eu chegar no máximo do paralelo eu troco a linguagem
 //--> Fim
 
-double fatorial(int n){
+float fatorial(int n){
     if(n == 0){
        return 1;
     }
-    double fat = n;
-    for(int i =n-1; i > 0;i--){
-	//printf("%d ->",i);
-	fat = fat * i;
-	//printf("%d\n",fat);
+    float fat = n;
+    int i = n-1;
+    for(i; i > 0;i--){
+		fat *= i;
     }
     return fat;
 }
 
-double serie_taylor(int n){
-   double e = 0;
-   for(int i = 0;i < n;i++){
-	e += 1/fatorial(i);
-	//printf("%f ->",1/fatorial(i));
+float serie_taylor(int n){
+   float e = 0;
+   float f = 0;
+   int i = 0;
+   for(i;i <= n;i++){
+   	f = 1/(float)fatorial(i);
+	e += f;
+	printf("1 / %d! = 1/%f == %f \n",i,fatorial(i),f);
    }
    return e;
 }
 
-int main(int argc, char **argv){
+int main(){
     printf("Projeto Turtle\n");
-    //printf("Fatorial de 5 %d \n",fatorial(5));
-    printf("\nSerie de taylor para n = 5000 %lf",serie_taylor(50000));
+    printf("\nSerie de taylor para n = 9 %.20f",serie_taylor(9));
+    return 0;
 }
