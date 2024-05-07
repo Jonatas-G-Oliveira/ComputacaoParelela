@@ -1,6 +1,11 @@
 # Série de Taylor - Operação Tartaruga
 
-## Adicionando primeira versão do programa
+
+## Compilar e executar o programa:
+- O código fonte se chama tartaruga.c
+- Compilar <code>gcc tartaruga.c -o a.out </code>
+- Executar <code>./a.out </code>
+## Primeira versão do programa
 
 ### "Números pequenos"
 <p>Pra esse primeira versão eu fiz um programa serial que funciona para números fatoriais "pequenos"
