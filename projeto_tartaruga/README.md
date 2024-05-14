@@ -32,3 +32,7 @@
 - <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Euler.png">
 
 ## Terceira Versão do programa(Paralelo)
+
+
+
+## Resultado e considerações Finais
