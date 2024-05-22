@@ -2,8 +2,8 @@
 
 
 ## Compilar e executar o programa:
-- O código fonte se chama tartaruga.c
-- Compilar <code>gcc tartaruga.c -o a.out </code>
+- O código fonte se chama tartarugaGMP.c
+- Compilar <code>gcc tartarugaGMP.c -o a.out </code>
 - Executar <code>./a.out </code>
 ## Primeira versão do programa(Serial)
 
@@ -25,14 +25,16 @@
 
 ## Segunda Versão do programa(Serial)
 <p>Para a segunda versão eu utilizei a biblioteca <code>gmp.h</code></p>
-<p>A biblioteca gmp nos permite manusear números com uma taxa de bits determinada</p>
+<p>A biblioteca gmp nos permite manusear números grandes com uma taxa de bit determinada</p>
+### Como funciona?
 <p>Para armazener o fatorial,o resultado da divsao e a soma eu utilizei 14000 bits</p>
 <p>Sendo assim eu consegui uma aproximação muito boa para 1800 passos do algoritmo de euler</p>
 
 - <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Euler.png">
-
+- Consegui um resultado de +8000 bits de precisão.
+- <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Resultado.png">
 ## Terceira Versão do programa(Paralelo)
-
-
+--Dar uma olhadinha no fatorial...Entender os bits <<<<<<<<<<<<-----------
+--Paralelilzar
 
 ## Resultado e considerações Finais
