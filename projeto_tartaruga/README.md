@@ -34,7 +34,13 @@
 - Consegui um resultado de +8000 bits de precisão.
 - <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Resultado.png">
 ## Terceira Versão do programa(Paralelo)
---Dar uma olhadinha no fatorial...Entender os bits <<<<<<<<<<<<-----------
---Paralelilzar
+-- Para a versão paralela do programa eu utilizei a biblioteca <code>gmp.h</code> para lidar com números grnades 
+-- E utilizei a biblioteca <code>openmp.h</code> para fazer a paralelização
+-- Para a paralização eu dividi o numero de tarefas igualmente para cada thread,porém a ultima thread irá trabalhar caso sobre tarefas nessas divisões.
+-- As versões possuem resultados iguais se voce definir a mesma configuração para ambas
+-- <img src ="">
+-- Inserir Gráfico de execução
+
 
 ## Resultado e considerações Finais
+-- Por fim podemos vemos a melhora na versão paralela do programa
