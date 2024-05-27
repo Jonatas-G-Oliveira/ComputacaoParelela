@@ -8,7 +8,7 @@
 
 ## Compilar e executar o programa paralelo:
 - O código fonte se chama tartarugaParalela.c 
-- Compilar <code>gcc tartarugaGMP.c -o a.out -lgmp -fopenmp </code>
+- Compilar <code>gcc tartarugaParalela.c -o a.out -lgmp -fopenmp </code>
 - Executar <code>./a.out </code>
 ## Primeira versão do programa(Serial)
 
