@@ -1,9 +1,14 @@
 # Série de Taylor - Operação Tartaruga
 
 
-## Compilar e executar o programa:
-- O código fonte se chama tartarugaGMP.c
-- Compilar <code>gcc tartarugaGMP.c -o a.out </code>
+## Compilar e executar o programa serial:
+- O código fonte se chama tartarugaGMP.c 
+- Compilar <code>gcc tartarugaGMP.c -o a.out -lgmp </code>
+- Executar <code>./a.out </code>
+
+## Compilar e executar o programa paralelo:
+- O código fonte se chama tartarugaParalela.c 
+- Compilar <code>gcc tartarugaGMP.c -o a.out -lgmp -fopenmp </code>
 - Executar <code>./a.out </code>
 ## Primeira versão do programa(Serial)
 
@@ -34,13 +39,24 @@
 - Consegui um resultado de +8000 bits de precisão.
 - <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Resultado.png">
 ## Terceira Versão do programa(Paralelo)
--- Para a versão paralela do programa eu utilizei a biblioteca <code>gmp.h</code> para lidar com números grnades 
--- E utilizei a biblioteca <code>openmp.h</code> para fazer a paralelização
--- Para a paralização eu dividi o numero de tarefas igualmente para cada thread,porém a ultima thread irá trabalhar caso sobre tarefas nessas divisões.
--- As versões possuem resultados iguais se voce definir a mesma configuração para ambas
--- <img src ="">
--- Inserir Gráfico de execução
-
+<br> Para a versão paralela do programa eu utilizei a biblioteca <code>gmp.h</code> para lidar com números grnades 
+<br> Utilizei a biblioteca <code>openmp.h</code> para fazer a paralelização
+<br> Para a paralização eu dividi o numero de tarefas igualmente para cada thread,porém a ultima thread irá trabalhar caso sobre tarefas nessas divisões.
+<br> As versões possuem resultados iguais se voce definir a mesma configuração para ambas
 
 ## Resultado e considerações Finais
--- Por fim podemos vemos a melhora na versão paralela do programa
+<p>
+    Executei 5 testes para cada caso para obter o resultado anterior de +20000 casas decimais
+   <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Tabela_Execu%C3%A7%C3%B5es.jpg"><br>
+</p>
+<p>
+   Após tirar as médias eu fiz um gráfico demonstrando o tempo de execução.
+   <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Thread_Tempo.jpg"><br>
+</p>
+   Podemos perceber como a paralelização foi benéfica para o programa através do gráfico de speedUp.
+   <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/SpeedUp.jpg"><br>
+</p>
+
+<p>
+   Muito obrigado pela atenção -_-/
+</p>
