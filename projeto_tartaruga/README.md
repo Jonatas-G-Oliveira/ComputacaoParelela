@@ -39,14 +39,14 @@
 - Consegui um resultado de +8000 bits de precisão.
 - <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Resultado.png">
 ## Terceira Versão do programa(Paralelo)
-<br> Para a versão paralela do programa eu utilizei a biblioteca <code>gmp.h</code> para lidar com números grnades 
+<br> Para a versão paralela do programa eu utilizei a biblioteca <code>gmp.h</code> para lidar com números grandes 
 <br> Utilizei a biblioteca <code>openmp.h</code> para fazer a paralelização
 <br> Para a paralização eu dividi o numero de tarefas igualmente para cada thread,porém a ultima thread irá trabalhar caso sobre tarefas nessas divisões.
-<br> As versões possuem resultados iguais se voce definir a mesma configuração para ambas
+<br> As versões possuem resultados iguais se voce definir a mesma configuração para ambas.
 
 ## Resultado e considerações Finais
 <p>
-    Executei 5 testes para cada caso para obter o resultado anterior de +20000 casas decimais
+    Executei 5 testes para cada caso para obter o resultado de +20000 casas decimais
    <img src ="https://github.com/Jonatas-G-Oliveira/ComputacaoParelela/blob/main/projeto_tartaruga/imagens/Tabela_Execu%C3%A7%C3%B5es.jpg"><br>
 </p>
 <p>
